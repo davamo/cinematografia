@@ -1,36 +1,33 @@
-<h1>Nueva Serie</h1>
+<div class="container"> 
 
-<%= form_with(model: @serie, url: series_path) do |form| %>
-  <% if @serie.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@serie.errors.count, "error") %> impidieron guardar esta serie:</h2>
+    <h1>Nueva Serie</h1>
 
-      <ul>
-        <% @serie.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <%= form_with(model: @serie) do |form| %>
+        <div class="card">
+            <div class="card-body">
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+                <div class="mb-3">
+                    <%= form.label :name %>
+                    <%= form.text_field :name %>
+                </div>
 
-  <div class="field">
-    <%= form.label :synopsis %>
-    <%= form.text_area :synopsis %>
-  </div>
+                <div class="mb-3">
+                    <%= form.label :director %>
+                    <%= form.text_field :director %>
+                </div>
 
-  <div class="field">
-    <%= form.label :director %>
-    <%= form.text_field :director %>
-  </div>
+                <div class="mb-3">
+                    <%= form.label :synopsis %>
+                    <%= form.text_field :synopsis %>
+                </div>
 
-  <div class="actions">
-    <%= form.submit 'Guardar' %>
-  </div>
-<% end %>
+                <div class="actions">
+                    <%= form.submit 'Guardar', class: 'btn btn-success' %>
+                </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    <%= link_to 'Volver a la lista', series_path, class: "btn btn-primary" %>
 
-<%= link_to 'Volver a la lista', series_path %>
+</div>

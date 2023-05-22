@@ -1,11 +1,13 @@
-<h1>Lista de Documentales</h1>
+<div class="container"> 
+    <h1>Lista de Documentales</h1>
 
-<ul>
-  <% @documentary_films.each do |documentary_film| %>
-    <li>
-      <strong>Nombre:</strong> <%= documentary_film.name %><br>
-      <strong>Sinopsis:</strong> <%= documentary_film.synopsis %><br>
-      <strong>Director:</strong> <%= documentary_film.director %>
-    </li>
-  <% end %>
-</ul>
+    <ul>
+    <% @documentary_films.each do |documentary_film| %>
+        <li>
+        <strong>Nombre:</strong> <%= documentary_film.name %><br>
+        <strong>Sinopsis:</strong> <%= documentary_film.synopsis %><br>
+        <strong>Director:</strong> <%= documentary_film.director %>
+        </li>
+    <% end %>
+    </ul>
+<div> 
