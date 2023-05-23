@@ -22,14 +22,15 @@
                 </div>
 
                 <div class="mb-3">
+                    <%= form.label :director %>
+                    <%= form.text_field :director %>
+                </div>
+
+                <div class="mb-3">
                     <%= form.label :synopsis %>
                     <%= form.text_area :synopsis %>
                 </div>
 
-                <div class="mb-3">
-                    <%= form.label :director %>
-                    <%= form.text_field :director %>
-                </div>
 
                 <div class="actions">
                     <%= form.submit 'Guardar', class: 'btn btn-success' %>
